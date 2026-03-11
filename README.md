@@ -1,38 +1,58 @@
-# WindowsSecurity
+# Keylogger Project
 
-A C# WinForms application that demonstrates keyboard event monitoring and log handling in a desktop environment.
+A C# WinForms application developed for educational purposes to explore keyboard event tracking and basic logging techniques in Windows.
 
-This project was created for educational purposes to explore:
+This project demonstrates how keyboard events can be captured and processed inside a desktop application.
 
-- Windows API usage
-- Keyboard event handling
-- Logging systems
-- SMTP-based email notifications
-- Secure credential handling with Environment Variables
+## Project Description
+
+The application uses Windows API functions to detect keyboard input and log pressed keys.  
+After collecting a certain number of keystrokes, the program sends the collected log using SMTP email.
+
+This project was created as part of a learning exercise in:
+
+- Windows Forms development
+- Windows API interaction
+- Event handling in C#
+- Basic logging systems
+- Email communication using SMTP
 
 ## Features
 
-- Global keyboard event monitoring
+- Keyboard input tracking
 - Log collection system
-- Email notification support with SMTP
-- Secure credential storage using Environment Variables
-- WinForms-based desktop interface
+- Automatic email sending after a number of keystrokes
+- CapsLock detection for uppercase characters
+- Support for numbers, letters and special characters
+- WinForms application structure
 
 ## Technologies Used
 
 | Technology | Purpose |
-|------------|---------|
+|-----------|--------|
 | C# | Main programming language |
-| .NET WinForms | Desktop interface |
-| Windows API (user32.dll) | Keyboard event monitoring |
-| SMTP | Sending email notifications |
-| Environment Variables | Secure credential storage |
+| .NET WinForms | Desktop application framework |
+| Windows API (user32.dll) | Detect keyboard events |
+| SMTP | Send log data via email |
+| Visual Studio | Development environment |
 
-## Why Environment Variables?
+## How It Works
 
-Hardcoding sensitive data like email passwords directly in source code is unsafe.
+1. The application starts and initializes keyboard tracking.
+2. Each key press is captured and added to a log string.
+3. The program keeps counting the pressed keys.
+4. When the number of captured keys exceeds a specific limit, the log is sent by email.
 
-### Unsafe Example
+## Educational Purpose
 
-```csharp
-client.Credentials = new NetworkCredential("mail@gmail.com", "password");
+This project was created to practice:
+
+- Windows Forms programming
+- Working with keyboard hooks
+- Logging user input
+- Sending emails from a C# application
+- Understanding event-driven programming
+
+## Author
+
+Mahmud Bekkar
