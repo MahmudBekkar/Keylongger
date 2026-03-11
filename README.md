@@ -55,4 +55,4 @@ This project was created to practice:
 
 ## Author
 
-Mahmud Bekkar
+Mahmoud Bakar
